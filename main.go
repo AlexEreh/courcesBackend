@@ -12,5 +12,5 @@ func main() {
 		data, _ := json.Marshal(struct{ Message string }{"Hello!"})
 		_, _ = io.WriteString(w, string(data))
 	})
-	_ = http.ListenAndServe("localhost:8080", mux)
+	_ = http.ListenAndServe("0.0.0.0:8080", mux)
 }
